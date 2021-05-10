@@ -10,6 +10,12 @@ function generatePassword() {
   let specialCharSet = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "^", "~", "*", "?", ":"];
   let numberCharSet = [1,2,3,4,5,6,7,8,9,10];
 
+  //global state
+  let state = {};
+    
+  //empty array
+  var passCharSet = [];
+
   var letterLength = window.prompt(
     'How many characters would you like your password to contain?'
   ); 
@@ -53,6 +59,7 @@ function generatePassword() {
     passCharSet.push(...numberCharSet);
   }
 
+  //atleast one character type should be selected
   if (
     upperCase == false &&
     lowerCase == false &&
