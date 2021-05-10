@@ -8,8 +8,8 @@ function generatePassword() {
   ); 
 
   // condition of user input 
-  if (letterLength > 256 || letterLength < 8) {
-    alert('Password must be between 8 to 256 characters.');
+  if (letterLength > 128 || letterLength < 8) {
+    alert('Password must be between 8 to 128 characters.');
     return generatePassword();
   }
   
