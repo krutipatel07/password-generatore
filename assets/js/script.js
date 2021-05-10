@@ -86,6 +86,14 @@ function generatePassword() {
   console.log('User wants special char? ', userCriteria.special);
   console.log('User wants numeric char? ', userCriteria.numeric);
 
+  //generate password as per selected criteria
+  let password = '';
+  for(var i = 0; i < letterLength; i++){
+    var random = Math.floor(Math.random() * passCharSet.length);
+    password = password + passCharSet[random];
+    console.log(password);
+  }
+
 }
 
 // Get references to the #generate element
