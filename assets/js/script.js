@@ -15,12 +15,36 @@ function generatePassword() {
   
   // series of prompts, taking confirmation from user
   var upperCase = confirm('Do you want to add UPPER CASE characters?');
+  state.upperCase = upperCase;
+  console.log(state); 
+
+  if(state.upperCase){
+    passCharSet.push(...upperCharSet);
+  }
 
   var lowerCase = confirm('Do you want to add LOWER CASE characters?');
+  state.lowerCase = lowerCase;
+  console.log(state); 
+
+  if(state.lowerCase){
+    passCharSet.push(...lowerCharSet);
+  }
 
   var special = confirm('Do you want to add SPECIAL characters?');
+  state.special = special;
+  console.log(state); 
+
+  if(state.special){
+    passCharSet.push(...specialCharSet);
+  }
 
   var numeric = confirm('Do you want to add NUMERIC characters?');
+  state.numeric = numeric;
+  console.log(state); 
+
+  if(state.numeric){
+    passCharSet.push(...numberCharSet);
+  }
 
   if (
     upperCase == false &&
