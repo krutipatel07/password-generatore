@@ -20,6 +20,14 @@ function generatePassword() {
     'How many characters would you like your password to contain?'
   ); 
 
+  // check if its number or not
+  letterLength = parseInt(letterLength);
+  if (Number.isNaN(letterLength)){
+    alert("Please write a number");
+    return generatePassword();
+  }
+  // console.log(typeof letterLength);
+
   // condition of user input 
   if (letterLength > 128 || letterLength < 8) {
     alert('Password must be between 8 to 128 characters.');
@@ -93,6 +101,7 @@ function generatePassword() {
     password = password + passCharSet[random];
     console.log(password);
   }
+  return password;
 
 }
 
